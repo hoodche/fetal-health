@@ -5,7 +5,6 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-Latest-red.svg)
 ![Docker](https://img.shields.io/badge/Docker-Compose-blue.svg)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.6.1-orange.svg)
-![Render](https://img.shields.io/badge/Deployed%20on-Render-46E3B7.svg)
 
 Proyecto de Machine Learning para clasificación de salud fetal utilizando modelos de ensemble, con optimización automática de hiperparámetros, despliegue containerizado e interfaces web interactivas.
 
@@ -13,13 +12,7 @@ Proyecto de Machine Learning para clasificación de salud fetal utilizando model
 
 ## 🌐 Demo en Vivo
 
-El proyecto está desplegado y disponible en línea:
-
-- **🎨 Frontend (Streamlit)**: [https://fetal-health-frontend.onrender.com](https://fetal-health-frontend.onrender.com)
-- **🔌 Backend API**: [https://fetal-health-backend-jnsr.onrender.com](https://fetal-health-backend-jnsr.onrender.com)
-- **📚 Documentación API Interactiva**: [https://fetal-health-backend-jnsr.onrender.com/docs](https://fetal-health-backend-jnsr.onrender.com/docs)
-
-> ⚠️ **Nota**: Los servicios gratuitos de Render se suspenden tras 15 minutos de inactividad. Si encuentras el servicio inactivo, espera 30-60 segundos para que se reactive automáticamente.
+El proyecto está disponible en 
 
 ## 📋 Tabla de Contenidos
 
