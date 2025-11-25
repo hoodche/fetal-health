@@ -10,13 +10,10 @@ Proyecto de Machine Learning para clasificación de salud fetal utilizando model
 
 **[📋 Gestión del Proyecto](https://github.com/orgs/Bootcamp-IA-P5/projects/5)** | **[📊 Dataset en Kaggle](https://www.kaggle.com/datasets/andrewmvd/fetal-health-classification/data)**
 
-## 🌐 Demo en Vivo
-
-El proyecto está disponible en 
+## 🌐 El proyecto está disponible en http://fetal-health.swedencentral.azurecontainer.io/
 
 ## 📋 Tabla de Contenidos
 
-- [Demo en Vivo](#-demo-en-vivo)
 - [Descripción General](#descripción-general)
 - [Características](#características)
 - [Estructura del Proyecto](#estructura-del-proyecto)
@@ -165,12 +162,10 @@ Equipo_4_Proyecto_VII_Modelos_de_ensemble/
 
 La forma más fácil de probar el sistema es usando la aplicación **desplegada on line**:
 
-1. **Accede al Frontend**: [https://fetal-health-frontend.onrender.com](https://fetal-health-frontend.onrender.com)
+1. **Accede al Frontend**: [http://fetal-health.swedencentral.azurecontainer.io/](http://fetal-health.swedencentral.azurecontainer.io/)
 2. **Ingresa los parámetros CTG** en los campos de entrada
 3. **Haz clic en "Predict"** para obtener el resultado de clasificación
 4. **Observa la predicción**: clase, etiqueta y nivel de confianza
-
-> 💡 **Tip**: Si es la primera visita o el servicio está inactivo, espera 30-60 segundos para que se active.
 
 ### 🖥️ Usando la Interfaz Web Local (Desarrollo)
 
@@ -192,7 +187,7 @@ curl https://fetal-health-backend-jnsr.onrender.com/health
 
 **Hacer una Predicción:**
 ```bash
-curl -X POST https://fetal-health-backend-jnsr.onrender.com/predict \
+curl -X POST http://fetal-health.swedencentral.azurecontainer.io/predict \
   -H "Content-Type: application/json" \
   -d '{
     "baseline_value": 120.0,
@@ -221,11 +216,11 @@ curl -X POST https://fetal-health-backend-jnsr.onrender.com/predict \
 
 **Obtener Información del Dataset:**
 ```bash
-curl https://fetal-health-backend-jnsr.onrender.com/dataset/info
+curl http://fetal-health.swedencentral.azurecontainer.io/dataset/info
 ```
 
 **Documentación Interactiva:**
-Visita [https://fetal-health-backend-jnsr.onrender.com/docs](https://fetal-health-backend-jnsr.onrender.com/docs) para probar la API directamente desde el navegador.
+Visita [fetal-health.swedencentral.azurecontainer.io/docs](fetal-health.swedencentral.azurecontainer.io/docs) para probar la API directamente desde el navegador.
 
 ## 🎓 Entrenamiento del Modelo
 
@@ -320,43 +315,6 @@ Realizar una predicción de salud fetal.
 #### `GET /dataset/info`
 Obtener información sobre el dataset incluyendo total de muestras, características, distribución de clases y valores faltantes.
 
-## � Despliegue
-
-
-```
-GitHub (feat/-Render_deployment)
-         ↓
-    Auto-deploy
-         ↓
-┌─────────────────────────────┐
-│       Render.com            │
-│  ┌────────────────────────┐ │
-│  │  Backend (FastAPI)     │ │ → https://fetal-health-backend-jnsr.onrender.com
-│  │  - Puerto: 8000        │ │
-│  │  - Health: /health     │ │
-│  └────────────────────────┘ │
-│                             │
-│  ┌────────────────────────┐ │
-│  │  Frontend (Streamlit)  │ │ → https://fetal-health-frontend.onrender.com
-│  │  - Puerto: 8501        │ │
-│  │  - Conecta al Backend  │ │
-│  └────────────────────────┘ │
-└─────────────────────────────┘
-```
-
-La configuración está completamente automatizada mediante `render.yaml`. Render detectará automáticamente la configuración y desplegará ambos servicios.
-
-### Actualizaciones
-
-El despliegue se actualiza automáticamente cuando se hace push a la rama `feat/-Render_deployment`:
-
-```bash
-git add .
-git commit -m "Update feature"
-git push origin feat/-Render_deployment
-# Render detecta el cambio y redespliega automáticamente (~5-10 min)
-```
-
 ## �📈 Resultados
 
 ### Rendimiento del Modelo
@@ -383,27 +341,12 @@ SMOTE se aplica durante el entrenamiento para manejar este desbalanceo.
 
 ## 👥 Equipo
 
-**Equipo 4** - Bootcamp IA P5
-
 - **Ignacio Castillo Franco** - [@IgnacioCastilloFranco](https://github.com/IgnacioCastilloFranco)
 - **Ciprian Nica** - [@CiprianNica](https://github.com/CiprianNica)
 - **Umit Gungor** - [@GungorUmit](https://github.com/GungorUmit)
-- **Johi Ortiz Vallejos** - [@johiortiz](https://github.com/johiortiz)
 
 ## 📝 Licencia
 
 Este proyecto es parte de un bootcamp educativo y está destinado para fines de aprendizaje.
 
-## 🙏 Agradecimientos
-
-- Dataset: [Clasificación de Salud Fetal a partir de datos CTG](https://www.kaggle.com/datasets/andrewmvd/fetal-health-classification/data)
-- Instructores y mentores del Bootcamp IA P5
-- Comunidades de scikit-learn y FastAPI
-- [Render.com](https://render.com) por proporcionar hosting gratuito para el proyecto
-
----
-
 **Nota**: Este es un proyecto de Machine Learning para fines educativos. Las decisiones médicas siempre deben ser tomadas por profesionales de la salud cualificados.
-
-**🌐 Demo en Vivo**: [https://fetal-health-frontend.onrender.com](https://fetal-health-frontend.onrender.com)
-
